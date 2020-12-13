@@ -1,7 +1,7 @@
 const tinyURL = require('tinyurl');
 
 // create shorter version of url
-exports.create = (req, res) => {
+module.exports.create = (req, res) => {
     const givenUrl = req.body.url;
 
     // error control
