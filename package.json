@@ -1,0 +1,20 @@
+{
+  "name": "backend-tech-assessment",
+  "version": "1.0.0",
+  "description": "Node API with Express, Sequelize & MySQL",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Claudia Teres Prieto",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5",
+    "swagger-ui-express": "^4.1.5"
+  }
+}

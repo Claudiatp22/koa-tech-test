@@ -1,0 +1,72 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Backend tech assessment",
+    "contact": {
+      "email": "claudiateresprieto@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080/api"
+    }
+  ],
+  "tags": [
+    {
+      "name": "url-shortener"
+    }
+  ],
+  "paths": {
+    "/tinyurl": {
+      "post": {
+        "tags": [
+          "url-shortener"
+        ],
+        "summary": "get a tiny version of your url",
+        "requestBody": {
+          "description": "url",
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "url": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "url": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "No url found",
+            "content": {}
+          },
+          "424": {
+            "description": "Invalid input",
+            "content": {}
+          }
+        },
+        "x-codegen-request-body-name": "body"
+      }
+    }
+  }
+}
