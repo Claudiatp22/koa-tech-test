@@ -1,4 +1,4 @@
-const tinyURL = require('tinyurl');
+const tinyURL = require("tinyurl");
 
 // create shorter version of url
 module.exports.create = (req, res) => {

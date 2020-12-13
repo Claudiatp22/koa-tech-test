@@ -1,6 +1,6 @@
 const sinon = require("sinon");
 const sandbox = sinon.createSandbox();
-const urlController = require('../../app/controllers/url.controller');
+const urlController = require("../../app/controllers/url.controller");
 
 // test logic controller
 describe("Url controller", function() {

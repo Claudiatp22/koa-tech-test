@@ -6,5 +6,5 @@ module.exports = app => {
     // Create shorter version of url
     router.post("/tinyurl", urlController.create);
 
-    app.use('/api', router);
+    app.use("/api", router);
 };
