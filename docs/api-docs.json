@@ -14,14 +14,14 @@
   ],
   "tags": [
     {
-      "name": "url-shortener"
+      "name": "URL-shortener"
     }
   ],
   "paths": {
     "/tinyurl": {
       "post": {
         "tags": [
-          "url-shortener"
+          "URL-shortener"
         ],
         "summary": "get a tiny version of your url",
         "requestBody": {
@@ -57,12 +57,13 @@
             }
           },
           "400": {
-            "description": "No url found",
-            "content": {}
+            "description": "No url found"
           },
-          "424": {
-            "description": "Invalid input",
-            "content": {}
+          "401": {
+            "description": "Invalid input"
+          },
+          "500": {
+            "description": "Server error"
           }
         },
         "x-codegen-request-body-name": "body"

@@ -7,5 +7,4 @@ module.exports = app => {
     router.post("/tinyurl", urlController.create);
 
     app.use('/api', router);
-    // app.use('/api/tutorials', router);
 };

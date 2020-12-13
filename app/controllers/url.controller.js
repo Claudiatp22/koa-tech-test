@@ -1,31 +1,29 @@
+const tinyURL = require('tinyurl');
 
-// Create shorter version of url
+// create shorter version of url
 exports.create = (req, res) => {
-    if(!req.body.url) {
+    const givenUrl = req.body.url;
+
+    // error control
+    if(!givenUrl) {
         res.status(400).send({
             message: "No url found"
         });
         return;
+    } else if(!givenUrl.startsWith("https://") && !givenUrl.startsWith("http://")) {
+        res.status(401).send({
+            message: "Invalid input"
+        });
+        return;
     }
 
-    // // Create a Tutorial
-    // const tutorial = {
-    //     title: req.body.title,
-    //     description: req.body.description,
-    //     published: req.body.published ? req.body.published : false
-    // };
-    //
-    // // Save Tutorial in the database
-    // Tutorial.create(tutorial)
-    //     .then(data => {
-    //         res.send(data);
-    //     })
-    //     .catch(err => {
-    //         res.status(500).send({
-    //             message:
-    //                 err.message || "Some error occurred while creating the Tutorial."
-    //         });
-    //     });
-
-    res.send("tiny url");
+    tinyURL.shorten(givenUrl.toString(), function(result, error) {
+        if (error){
+            res.status(500).send({
+                message: error.message || "Server error"
+            });
+        } else {
+            res.send(result);
+        }
+    });
 };
