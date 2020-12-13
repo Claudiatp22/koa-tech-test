@@ -27,6 +27,11 @@ npm install
 npm start
 ```
 
+### Try the service in swagger
+
+> http://localhost:8080/api-docs/
+
+
 ####A markdown file and image with information about the productized/industrialized version of the service can be found in docs/serviceDesign  
-*a basic personal node-express-sequelize boilerplate was used for this test
+*a basic personal node-express-sequelize boilerplate was used for this assessment
 
