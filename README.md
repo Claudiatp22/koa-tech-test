@@ -1,6 +1,6 @@
 # Koa backend tech assessment
 
-####Claudia Terés Prieto
+Claudia Terés Prieto
 ###
 
 Stack used:
@@ -32,6 +32,7 @@ npm start
 > http://localhost:8080/api-docs/
 
 
-####A markdown file and image with information about the productized/industrialized version of the service can be found in docs/serviceDesign  
+A markdown file and image with information about the productized/industrialized version of the service can be found in docs/serviceDesign  
+
 *a basic personal node-express-sequelize boilerplate was used for this assessment
 
